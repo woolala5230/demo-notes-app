@@ -1,0 +1,520 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.1.15"
+        }
+      },
+      "admin-notes-MyStack": {
+        "id": "admin-notes-MyStack",
+        "path": "admin-notes-MyStack",
+        "children": {
+          "SSTMetadata": {
+            "id": "SSTMetadata",
+            "path": "admin-notes-MyStack/SSTMetadata",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnResource",
+              "version": "2.24.0"
+            }
+          },
+          "Api": {
+            "id": "Api",
+            "path": "admin-notes-MyStack/Api",
+            "children": {
+              "Api": {
+                "id": "Api",
+                "path": "admin-notes-MyStack/Api/Api",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-MyStack/Api/Api/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Api",
+                      "aws:cdk:cloudformation:props": {
+                        "corsConfiguration": {
+                          "allowHeaders": [
+                            "*"
+                          ],
+                          "allowMethods": [
+                            "*"
+                          ],
+                          "allowOrigins": [
+                            "*"
+                          ]
+                        },
+                        "name": "admin-notes-Api",
+                        "protocolType": "HTTP",
+                        "tags": {
+                          "sst:app": "notes",
+                          "sst:stage": "admin"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnApi",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "DefaultStage": {
+                    "id": "DefaultStage",
+                    "path": "admin-notes-MyStack/Api/Api/DefaultStage",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "admin-notes-MyStack/Api/Api/DefaultStage/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Stage",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Ref": "ApiCD79AAA0"
+                            },
+                            "stageName": "$default",
+                            "accessLogSettings": {
+                              "format": "{\"requestTime\":\"$context.requestTime\",\"requestId\":\"$context.requestId\",\"httpMethod\":\"$context.httpMethod\",\"path\":\"$context.path\",\"routeKey\":\"$context.routeKey\",\"status\":$context.status,\"responseLatency\":$context.responseLatency,\"integrationRequestId\":\"$context.integration.requestId\",\"integrationStatus\":\"$context.integration.status\",\"integrationLatency\":\"$context.integration.latency\",\"integrationServiceStatus\":\"$context.integration.integrationStatus\",\"ip\":\"$context.identity.sourceIp\",\"userAgent\":\"$context.identity.userAgent\",\"cognitoIdentityId\":\"$context.identity.cognitoIdentityId\"}",
+                              "destinationArn": {
+                                "Fn::GetAtt": [
+                                  "ApiLogGroup1717FE17",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            "autoDeploy": true,
+                            "tags": {
+                              "sst:app": "notes",
+                              "sst:stage": "admin"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnStage",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpStage",
+                      "version": "2.24.0-alpha.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpApi",
+                  "version": "2.24.0-alpha.0"
+                }
+              },
+              "LogGroup": {
+                "id": "LogGroup",
+                "path": "admin-notes-MyStack/Api/LogGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-MyStack/Api/LogGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "logGroupName": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "/aws/vendedlogs/apis/admin-notes-Api-",
+                              {
+                                "Ref": "ApiCD79AAA0"
+                              },
+                              "/default"
+                            ]
+                          ]
+                        },
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "notes"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "admin"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_logs.CfnLogGroup",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.LogGroup",
+                  "version": "2.24.0"
+                }
+              },
+              "Lambda_GET_--": {
+                "id": "Lambda_GET_--",
+                "path": "admin-notes-MyStack/Api/Lambda_GET_--",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "admin-notes-MyStack/Api/Lambda_GET_--/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "admin-notes-MyStack/Api/Lambda_GET_--/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "sst:app",
+                                "value": "notes"
+                              },
+                              {
+                                "key": "sst:stage",
+                                "value": "admin"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                          "version": "2.24.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "admin-notes-MyStack/Api/Lambda_GET_--/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "admin-notes-MyStack/Api/Lambda_GET_--/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "xray:PutTraceSegments",
+                                        "xray:PutTelemetryRecords"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "s3:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        "arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0",
+                                        "arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0/*"
+                                      ]
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ApiLambdaGETServiceRoleDefaultPolicy013A8DEA",
+                                "roles": [
+                                  {
+                                    "Ref": "ApiLambdaGETServiceRole210B6205"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                              "version": "2.24.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Policy",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Role",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "admin-notes-MyStack/Api/Lambda_GET_--/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "admin-notes-MyStack/Api/Lambda_GET_--/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.24.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "admin-notes-MyStack/Api/Lambda_GET_--/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-MyStack/Api/Lambda_GET_--/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": "cdk-hnb659fds-assets-770168654497-us-east-1",
+                          "s3Key": "60c24673c0b393cf32ebf0a8f67868ba680b207707b56cc28238f35f127f51af.zip"
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "ApiLambdaGETServiceRole210B6205",
+                            "Arn"
+                          ]
+                        },
+                        "environment": {
+                          "variables": {
+                            "SST_DEBUG_SRC_PATH": "backend",
+                            "SST_DEBUG_SRC_HANDLER": "functions/lambda.handler",
+                            "SST_DEBUG_ENDPOINT": "wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin",
+                            "SST_DEBUG_BUCKET_NAME": "admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0",
+                            "SST_FUNCTION_ID": "admin-notes-MyStack-Api-Lambda_GET_-",
+                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+                            "SST_DEBUG_IS_API_ROUTE": "1"
+                          }
+                        },
+                        "ephemeralStorage": {
+                          "size": 512
+                        },
+                        "handler": "index.main",
+                        "memorySize": 1024,
+                        "runtime": "nodejs16.x",
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "notes"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "admin"
+                          }
+                        ],
+                        "timeout": 10,
+                        "tracingConfig": {
+                          "mode": "Active"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "EventInvokeConfig": {
+                    "id": "EventInvokeConfig",
+                    "path": "admin-notes-MyStack/Api/Lambda_GET_--/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "admin-notes-MyStack/Api/Lambda_GET_--/EventInvokeConfig/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "ApiLambdaGETB1714EF3"
+                            },
+                            "qualifier": "$LATEST",
+                            "maximumRetryAttempts": 0
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.Function",
+                  "version": "2.24.0"
+                }
+              },
+              "Route_GET_--": {
+                "id": "Route_GET_--",
+                "path": "admin-notes-MyStack/Api/Route_GET_--",
+                "children": {
+                  "Integration_GET_--": {
+                    "id": "Integration_GET_--",
+                    "path": "admin-notes-MyStack/Api/Route_GET_--/Integration_GET_--",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "admin-notes-MyStack/Api/Route_GET_--/Integration_GET_--/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Ref": "ApiCD79AAA0"
+                            },
+                            "integrationType": "AWS_PROXY",
+                            "integrationUri": {
+                              "Fn::GetAtt": [
+                                "ApiLambdaGETB1714EF3",
+                                "Arn"
+                              ]
+                            },
+                            "payloadFormatVersion": "2.0"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnIntegration",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpIntegration",
+                      "version": "2.24.0-alpha.0"
+                    }
+                  },
+                  "Integration_GET_---Permission": {
+                    "id": "Integration_GET_---Permission",
+                    "path": "admin-notes-MyStack/Api/Route_GET_--/Integration_GET_---Permission",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                      "aws:cdk:cloudformation:props": {
+                        "action": "lambda:InvokeFunction",
+                        "functionName": {
+                          "Fn::GetAtt": [
+                            "ApiLambdaGETB1714EF3",
+                            "Arn"
+                          ]
+                        },
+                        "principal": "apigateway.amazonaws.com",
+                        "sourceArn": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "arn:",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              ":execute-api:us-east-1:770168654497:",
+                              {
+                                "Ref": "ApiCD79AAA0"
+                              },
+                              "/*/*/"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-MyStack/Api/Route_GET_--/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "ApiCD79AAA0"
+                        },
+                        "routeKey": "GET /",
+                        "authorizationType": "NONE",
+                        "target": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "integrations/",
+                              {
+                                "Ref": "ApiRouteGETIntegrationGET10DCD122"
+                              }
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnRoute",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpRoute",
+                  "version": "2.24.0-alpha.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.15"
+            }
+          },
+          "ApiEndpoint": {
+            "id": "ApiEndpoint",
+            "path": "admin-notes-MyStack/ApiEndpoint",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.24.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.24.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.24.0"
+    }
+  }
+}
