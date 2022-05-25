@@ -20,14 +20,32 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // stacks/index.js
 var stacks_exports = {};
 __export(stacks_exports, {
-  default: () => stacks_default
+  default: () => main
 });
 module.exports = __toCommonJS(stacks_exports);
 
-// stacks/MyStack.js
+// stacks/StorageStack.js
 var import_resources = require("@serverless-stack/resources");
+function StorageStack({ stack, app }) {
+  const bucket = new import_resources.Bucket(stack, "Uploads");
+  const table = new import_resources.Table(stack, "Notes", {
+    fields: {
+      userId: "string",
+      noteId: "string"
+    },
+    primaryIndex: { partitionKey: "userId", sortKey: "noteId" }
+  });
+  return {
+    table,
+    bucket
+  };
+}
+__name(StorageStack, "StorageStack");
+
+// stacks/MyStack.js
+var import_resources2 = require("@serverless-stack/resources");
 function MyStack({ stack }) {
-  const api = new import_resources.Api(stack, "Api", {
+  const api = new import_resources2.Api(stack, "Api", {
     routes: {
       "GET /": "functions/lambda.handler"
     }
@@ -39,8 +57,8 @@ function MyStack({ stack }) {
 __name(MyStack, "MyStack");
 
 // stacks/index.js
-var import_resources2 = require("@serverless-stack/resources");
-function stacks_default(app) {
+var import_resources3 = require("@serverless-stack/resources");
+function main(app) {
   app.setDefaultFunctionProps({
     runtime: "nodejs16.x",
     srcPath: "backend",
@@ -48,9 +66,10 @@ function stacks_default(app) {
       format: "esm"
     }
   });
+  app.stack(StorageStack);
   app.stack(MyStack);
 }
-__name(stacks_default, "default");
+__name(main, "main");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {});
 //# sourceMappingURL=index.js.map

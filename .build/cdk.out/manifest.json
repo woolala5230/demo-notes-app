@@ -7,6 +7,98 @@
         "file": "tree.json"
       }
     },
+    "admin-notes-StorageStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "admin-notes-StorageStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "admin-notes-StorageStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://770168654497/us-east-1",
+      "properties": {
+        "templateFile": "admin-notes-StorageStack.template.json",
+        "tags": {
+          "sst:app": "notes",
+          "sst:stage": "admin"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-deploy-role-770168654497-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-cfn-exec-role-770168654497-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-770168654497-us-east-1/a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "admin-notes-StorageStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-lookup-role-770168654497-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "admin-notes-StorageStack.assets"
+      ],
+      "metadata": {
+        "/admin-notes-StorageStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "notes"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "admin"
+              }
+            ]
+          }
+        ],
+        "/admin-notes-StorageStack/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/admin-notes-StorageStack/Uploads/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsBucketC4B27CC7"
+          }
+        ],
+        "/admin-notes-StorageStack/Notes/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "NotesTable7100B0E8"
+            }
+          }
+        ],
+        "/admin-notes-StorageStack/Notes/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotesTable7100B0E8"
+          }
+        ],
+        "/admin-notes-StorageStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/admin-notes-StorageStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "admin-notes-StorageStack"
+    },
     "admin-notes-MyStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {

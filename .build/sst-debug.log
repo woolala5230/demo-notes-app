@@ -1,15 +1,15 @@
-[2022-05-23T23:18:03.141] [DEBUG] default - SST: 1.1.2
-[2022-05-23T23:18:03.144] [DEBUG] default - CDK: 2.24.0
-[2022-05-23T23:18:03.148] [DEBUG] aws-auth - Determining if we're on an EC2 instance.
-[2022-05-23T23:18:03.148] [DEBUG] aws-auth - Does not look like an EC2 instance.
-[2022-05-23T23:18:03.848] [INFO] default - Using stage: admin
-[2022-05-23T23:18:03.850] [INFO] default - [90mPreparing your SST app[39m
-[2022-05-23T23:18:03.880] [INFO] default - 
-[2022-05-23T23:18:03.880] [INFO] default - =======================
-[2022-05-23T23:18:03.881] [INFO] default -  Deploying debug stack
-[2022-05-23T23:18:03.881] [INFO] default - =======================
-[2022-05-23T23:18:03.881] [INFO] default - 
-[2022-05-23T23:18:03.882] [DEBUG] core - synth {
+[2022-05-25T16:37:08.379] [DEBUG] default - SST: 1.1.2
+[2022-05-25T16:37:08.396] [DEBUG] default - CDK: 2.24.0
+[2022-05-25T16:37:08.404] [DEBUG] aws-auth - Determining if we're on an EC2 instance.
+[2022-05-25T16:37:08.424] [DEBUG] aws-auth - Does not look like an EC2 instance.
+[2022-05-25T16:37:09.636] [INFO] default - Using stage: admin
+[2022-05-25T16:37:09.639] [INFO] default - [90mPreparing your SST app[39m
+[2022-05-25T16:37:09.749] [INFO] default - 
+[2022-05-25T16:37:09.766] [INFO] default - =======================
+[2022-05-25T16:37:09.767] [INFO] default -  Deploying debug stack
+[2022-05-25T16:37:09.768] [INFO] default - =======================
+[2022-05-25T16:37:09.769] [INFO] default - 
+[2022-05-25T16:37:09.771] [DEBUG] core - synth {
   output: 'cdk.out',
   app: 'node bin/index.js notes admin us-east-1 "/Users/jmkim/notes/.build/lib"',
   rollback: true,
@@ -17,22 +17,22 @@
   verbose: 0,
   noColor: false
 }
-[2022-05-23T23:18:07.288] [TRACE] cdk - 
+[2022-05-25T16:37:13.647] [TRACE] cdk - 
 
-[2022-05-23T23:18:07.341] [INFO] default - [90mDeploying stacks[39m
-[2022-05-23T23:18:07.342] [DEBUG] core - checkInReviewBootstrapStacks
-[2022-05-23T23:18:07.343] [DEBUG] core - checkInReviewBootstrapStackInRegion us-east-1
-[2022-05-23T23:18:08.431] [TRACE] core - Initial stack states: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
-[2022-05-23T23:18:08.431] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
-[2022-05-23T23:18:08.433] [DEBUG] core - deploy stack: started admin-notes-debug-stack
-[2022-05-23T23:18:08.433] [DEBUG] core - deploy stack: get pre-deploy status
-[2022-05-23T23:18:09.315] [DEBUG] core - deploy stack: get pre-deploy status: {
+[2022-05-25T16:37:13.695] [INFO] default - [90mDeploying stacks[39m
+[2022-05-25T16:37:13.704] [DEBUG] core - checkInReviewBootstrapStacks
+[2022-05-25T16:37:13.704] [DEBUG] core - checkInReviewBootstrapStackInRegion us-east-1
+[2022-05-25T16:37:14.672] [TRACE] core - Initial stack states: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
+[2022-05-25T16:37:14.673] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
+[2022-05-25T16:37:14.674] [DEBUG] core - deploy stack: started admin-notes-debug-stack
+[2022-05-25T16:37:14.692] [DEBUG] core - deploy stack: get pre-deploy status
+[2022-05-25T16:37:15.563] [DEBUG] core - deploy stack: get pre-deploy status: {
   StackStatus: 'CREATE_COMPLETE',
   LastUpdatedTime: 2022-05-23T13:24:24.354Z
 }
-[2022-05-23T23:18:09.317] [DEBUG] core - deploy stack: addInUseExports
-[2022-05-23T23:18:09.319] [DEBUG] core - deploy stack: isTemplateChanged
-[2022-05-23T23:18:10.438] [DEBUG] core - Resources:
+[2022-05-25T16:37:15.579] [DEBUG] core - deploy stack: addInUseExports
+[2022-05-25T16:37:15.583] [DEBUG] core - deploy stack: isTemplateChanged
+[2022-05-25T16:37:16.830] [DEBUG] core - Resources:
   TableCD117FA1:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -632,7 +632,7 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-05-23T23:18:10.439] [DEBUG] core - Resources:
+[2022-05-25T16:37:16.840] [DEBUG] core - Resources:
   TableCD117FA1:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -1232,8 +1232,8 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-05-23T23:18:10.439] [DEBUG] core - deploy stack: isTemplateChanged: unchanged
-[2022-05-23T23:18:10.440] [DEBUG] core - deploy stack: done admin-notes-debug-stack {
+[2022-05-25T16:37:16.841] [DEBUG] core - deploy stack: isTemplateChanged: unchanged
+[2022-05-25T16:37:16.859] [DEBUG] core - deploy stack: done admin-notes-debug-stack {
   status: 'unchanged',
   statusReason: undefined,
   account: '770168654497',
@@ -1244,20 +1244,20 @@ Rules:
   },
   exports: {}
 }
-[2022-05-23T23:18:10.440] [INFO] core - [32m[39m
+[2022-05-25T16:37:16.860] [INFO] core - [32m[39m
 [32m ✅  admin-notes-debug-stack (no changes)[39m
 [32m[39m
-[2022-05-23T23:18:10.441] [DEBUG] core - At least 1 stack successfully deployed, call deployStacks() again
-[2022-05-23T23:18:10.441] [TRACE] core - After deploy stacks: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653315490440,"endedAt":1653315490440,"events":[],"outputs":{"BucketArn":"arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0","BucketName":"admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0","Endpoint":"wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin"},"exports":{}}]
-[2022-05-23T23:18:10.442] [INFO] default - 
+[2022-05-25T16:37:16.861] [DEBUG] core - At least 1 stack successfully deployed, call deployStacks() again
+[2022-05-25T16:37:16.861] [TRACE] core - After deploy stacks: [{"id":"admin-notes-debug-stack","name":"admin-notes-debug-stack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464236860,"endedAt":1653464236860,"events":[],"outputs":{"BucketArn":"arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0","BucketName":"admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0","Endpoint":"wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin"},"exports":{}}]
+[2022-05-25T16:37:16.863] [INFO] default - 
 Stack admin-notes-debug-stack
-[2022-05-23T23:18:10.442] [INFO] default -   Status: no changes
-[2022-05-23T23:18:10.443] [INFO] default -   Outputs:
-[2022-05-23T23:18:10.443] [INFO] default -     BucketArn: arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
-[2022-05-23T23:18:10.444] [INFO] default -     BucketName: admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
-[2022-05-23T23:18:10.444] [INFO] default -     Endpoint: wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin
-[2022-05-23T23:18:10.444] [INFO] default - 
-[2022-05-23T23:18:10.444] [DEBUG] default - deployRet [
+[2022-05-25T16:37:16.882] [INFO] default -   Status: no changes
+[2022-05-25T16:37:16.884] [INFO] default -   Outputs:
+[2022-05-25T16:37:16.885] [INFO] default -     BucketArn: arn:aws:s3:::admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
+[2022-05-25T16:37:16.885] [INFO] default -     BucketName: admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
+[2022-05-25T16:37:16.886] [INFO] default -     Endpoint: wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin
+[2022-05-25T16:37:16.905] [INFO] default - 
+[2022-05-25T16:37:16.906] [DEBUG] default - deployRet [
   {
     id: 'admin-notes-debug-stack',
     name: 'admin-notes-debug-stack',
@@ -1272,12 +1272,12 @@ Stack admin-notes-debug-stack
     exports: {}
   }
 ]
-[2022-05-23T23:18:10.446] [INFO] default - 
-[2022-05-23T23:18:10.446] [INFO] default - ===============
-[2022-05-23T23:18:10.446] [INFO] default -  Deploying app
-[2022-05-23T23:18:10.446] [INFO] default - ===============
-[2022-05-23T23:18:10.447] [INFO] default - 
-[2022-05-23T23:18:10.447] [DEBUG] core - synth {
+[2022-05-25T16:37:16.907] [INFO] default - 
+[2022-05-25T16:37:16.908] [INFO] default - ===============
+[2022-05-25T16:37:16.926] [INFO] default -  Deploying app
+[2022-05-25T16:37:16.926] [INFO] default - ===============
+[2022-05-25T16:37:16.927] [INFO] default - 
+[2022-05-25T16:37:16.929] [DEBUG] core - synth {
   output: '.build/cdk.out',
   app: 'node .build/run.js',
   rollback: true,
@@ -1285,22 +1285,33 @@ Stack admin-notes-debug-stack
   verbose: 0,
   noColor: false
 }
-[2022-05-23T23:18:13.865] [TRACE] cdk - 
+[2022-05-25T16:37:20.902] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/jmkim/notes/.build/cdk.out[39m[32m[39m
 
-[2022-05-23T23:18:23.582] [INFO] default - [90mDeploying stacks[39m
-[2022-05-23T23:18:23.583] [DEBUG] core - checkInReviewBootstrapStacks
-[2022-05-23T23:18:23.583] [DEBUG] core - checkInReviewBootstrapStackInRegion us-east-1
-[2022-05-23T23:18:24.447] [TRACE] core - Initial stack states: [{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
-[2022-05-23T23:18:24.447] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
-[2022-05-23T23:18:24.448] [DEBUG] core - deploy stack: started admin-notes-MyStack
-[2022-05-23T23:18:24.448] [DEBUG] core - deploy stack: get pre-deploy status
-[2022-05-23T23:18:25.340] [DEBUG] core - deploy stack: get pre-deploy status: {
+[2022-05-25T16:37:20.916] [TRACE] cdk - Supply a stack id ([32madmin-notes-MyStack[39m, [32madmin-notes-StorageStack[39m) to display its template.
+
+
+[2022-05-25T16:37:33.275] [INFO] default - [90mDeploying stacks[39m
+[2022-05-25T16:37:33.292] [DEBUG] core - checkInReviewBootstrapStacks
+[2022-05-25T16:37:33.308] [DEBUG] core - checkInReviewBootstrapStackInRegion us-east-1
+[2022-05-25T16:37:34.177] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
+[2022-05-25T16:37:34.194] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"pending","dependencies":[],"region":"us-east-1","events":[]}]
+[2022-05-25T16:37:34.195] [DEBUG] core - deploy stack: started admin-notes-StorageStack
+[2022-05-25T16:37:34.195] [DEBUG] core - deploy stack: get pre-deploy status
+[2022-05-25T16:37:34.197] [DEBUG] core - deploy stack: started admin-notes-MyStack
+[2022-05-25T16:37:34.197] [DEBUG] core - deploy stack: get pre-deploy status
+[2022-05-25T16:37:35.004] [DEBUG] core - deploy stack: get pre-deploy status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:35.013] [DEBUG] core - deploy stack: addInUseExports
+[2022-05-25T16:37:35.018] [DEBUG] core - deploy stack: get pre-deploy status: {
   StackStatus: 'UPDATE_COMPLETE',
   LastUpdatedTime: 2022-05-23T14:00:27.868Z
 }
-[2022-05-23T23:18:25.340] [DEBUG] core - deploy stack: addInUseExports
-[2022-05-23T23:18:25.342] [DEBUG] core - deploy stack: isTemplateChanged
-[2022-05-23T23:18:26.236] [DEBUG] core - Resources:
+[2022-05-25T16:37:35.035] [DEBUG] core - deploy stack: addInUseExports
+[2022-05-25T16:37:35.037] [DEBUG] core - deploy stack: isTemplateChanged
+[2022-05-25T16:37:35.042] [DEBUG] core - deploy stack: isTemplateChanged
+[2022-05-25T16:37:35.947] [DEBUG] core - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -1563,7 +1574,7 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-05-23T23:18:26.237] [DEBUG] core - Resources:
+[2022-05-25T16:37:35.953] [DEBUG] core - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -1826,8 +1837,8 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-05-23T23:18:26.237] [DEBUG] core - deploy stack: isTemplateChanged: unchanged
-[2022-05-23T23:18:26.238] [DEBUG] core - deploy stack: done admin-notes-MyStack {
+[2022-05-25T16:37:35.972] [DEBUG] core - deploy stack: isTemplateChanged: unchanged
+[2022-05-25T16:37:35.993] [DEBUG] core - deploy stack: done admin-notes-MyStack {
   status: 'unchanged',
   statusReason: undefined,
   account: '770168654497',
@@ -1836,32 +1847,279 @@ Rules:
   },
   exports: {}
 }
-[2022-05-23T23:18:26.238] [INFO] core - [32m[39m
+[2022-05-25T16:37:35.995] [INFO] core - [32m[39m
 [32m ✅  admin-notes-MyStack (no changes)[39m
 [32m[39m
-[2022-05-23T23:18:26.240] [DEBUG] core - At least 1 stack successfully deployed, call deployStacks() again
-[2022-05-23T23:18:26.240] [TRACE] core - After deploy stacks: [{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653315506238,"endedAt":1653315506238,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
-[2022-05-23T23:18:26.243] [INFO] default - 
+[2022-05-25T16:37:36.017] [DEBUG] core - Resources:
+  SSTMetadata:
+    Type: AWS::CDK::Metadata
+    Metadata:
+      aws:cdk:path: admin-notes-StorageStack/SSTMetadata
+      sst:version: 1.1.2
+      sst:constructs:
+        - id: Notes
+          addr: c888d084f1a912ef3ee73aabfcbd1908e7242d4926
+          stack: admin-notes-StorageStack
+          type: Table
+          data:
+            tableName:
+              Ref: NotesTable7100B0E8
+            consumers: []
+  NotesTable7100B0E8:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      KeySchema:
+        - AttributeName: userId
+          KeyType: HASH
+        - AttributeName: noteId
+          KeyType: RANGE
+      AttributeDefinitions:
+        - AttributeName: userId
+          AttributeType: S
+        - AttributeName: noteId
+          AttributeType: S
+      BillingMode: PAY_PER_REQUEST
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      TableName: admin-notes-Notes
+      Tags:
+        - Key: sst:app
+          Value: notes
+        - Key: sst:stage
+          Value: admin
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: admin-notes-StorageStack/Notes/Table/Resource
+Parameters:
+  BootstrapVersion:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /cdk-bootstrap/hnb659fds/version
+    Description: >-
+      Version of the CDK Bootstrap resources in this environment, automatically
+      retrieved from SSM Parameter Store. [cdk:skip]
+Rules:
+  CheckBootstrapVersion:
+    Assertions:
+      - Assert:
+          Fn::Not:
+            - Fn::Contains:
+                - - '1'
+                  - '2'
+                  - '3'
+                  - '4'
+                  - '5'
+                - Ref: BootstrapVersion
+        AssertDescription: >-
+          CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
+          with a recent version of the CDK CLI.
+
+[2022-05-25T16:37:36.017] [DEBUG] core - Resources:
+  SSTMetadata:
+    Type: AWS::CDK::Metadata
+    Metadata:
+      aws:cdk:path: admin-notes-StorageStack/SSTMetadata
+      sst:version: 1.1.2
+      sst:constructs:
+        - id: Uploads
+          addr: c8ff75e9b8ea3437c5c125f407e1ba513c0fec33d9
+          stack: admin-notes-StorageStack
+          type: Bucket
+          data:
+            name:
+              Ref: UploadsBucketC4B27CC7
+            notifications: []
+            notificationNames: []
+        - id: Notes
+          addr: c888d084f1a912ef3ee73aabfcbd1908e7242d4926
+          stack: admin-notes-StorageStack
+          type: Table
+          data:
+            tableName:
+              Ref: NotesTable7100B0E8
+            consumers: []
+  UploadsBucketC4B27CC7:
+    Type: AWS::S3::Bucket
+    Properties:
+      Tags:
+        - Key: sst:app
+          Value: notes
+        - Key: sst:stage
+          Value: admin
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: admin-notes-StorageStack/Uploads/Bucket/Resource
+  NotesTable7100B0E8:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      KeySchema:
+        - AttributeName: userId
+          KeyType: HASH
+        - AttributeName: noteId
+          KeyType: RANGE
+      AttributeDefinitions:
+        - AttributeName: userId
+          AttributeType: S
+        - AttributeName: noteId
+          AttributeType: S
+      BillingMode: PAY_PER_REQUEST
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      TableName: admin-notes-Notes
+      Tags:
+        - Key: sst:app
+          Value: notes
+        - Key: sst:stage
+          Value: admin
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: admin-notes-StorageStack/Notes/Table/Resource
+Parameters:
+  BootstrapVersion:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /cdk-bootstrap/hnb659fds/version
+    Description: >-
+      Version of the CDK Bootstrap resources in this environment, automatically
+      retrieved from SSM Parameter Store. [cdk:skip]
+Rules:
+  CheckBootstrapVersion:
+    Assertions:
+      - Assert:
+          Fn::Not:
+            - Fn::Contains:
+                - - '1'
+                  - '2'
+                  - '3'
+                  - '4'
+                  - '5'
+                - Ref: BootstrapVersion
+        AssertDescription: >-
+          CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
+          with a recent version of the CDK CLI.
+
+[2022-05-25T16:37:36.018] [DEBUG] core - deploy stack: run cdk deploy
+[2022-05-25T16:37:36.038] [DEBUG] core - deploy stack: poll stack status
+[2022-05-25T16:37:36.865] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:36.872] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:37:37.681] [TRACE] core - deploy stack: run cdk deploy: stderr: 
+✨  Synthesis time: 0.03s
+
+
+[2022-05-25T16:37:37.694] [TRACE] core - deploy stack: run cdk deploy: stderr: [1madmin-notes-StorageStack[22m: deploying...
+
+[2022-05-25T16:37:40.308] [TRACE] core - deploy stack: run cdk deploy: stderr: [0%] start: Publishing a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3:770168654497-us-east-1
+
+[2022-05-25T16:37:40.732] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:40.748] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:37:44.656] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:44.666] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:37:44.837] [TRACE] core - deploy stack: run cdk deploy: stderr: [100%] success: Published a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3:770168654497-us-east-1
+
+[2022-05-25T16:37:47.466] [TRACE] core - deploy stack: run cdk deploy: stderr: [1madmin-notes-StorageStack[22m: creating CloudFormation changeset...
+
+[2022-05-25T16:37:48.535] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:48.543] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:37:52.389] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:52.390] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:37:56.241] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'CREATE_COMPLETE',
+  LastUpdatedTime: 2022-05-25T07:16:06.468Z
+}
+[2022-05-25T16:37:56.243] [DEBUG] core - deploy stack: poll stack status: unknown
+[2022-05-25T16:38:00.295] [DEBUG] core - deploy stack: poll stack status: {
+  StackStatus: 'UPDATE_IN_PROGRESS',
+  LastUpdatedTime: 2022-05-25T07:37:56.599Z
+}
+[2022-05-25T16:38:00.295] [DEBUG] core - deploy stack: poll stack status: cf update started
+[2022-05-25T16:38:00.296] [DEBUG] core - deploy stack: done admin-notes-StorageStack {
+  status: 'deploying',
+  statusReason: undefined,
+  account: '770168654497',
+  outputs: {},
+  exports: {}
+}
+[2022-05-25T16:38:00.297] [DEBUG] core - At least 1 stack successfully deployed, call deployStacks() again
+[2022-05-25T16:38:00.298] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[],"outputs":{},"exports":{}},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:00.298] [INFO] default - Checking deploy status...
+[2022-05-25T16:38:00.329] [DEBUG] core - deploy stack: run cdk deploy: exited with code null
+[2022-05-25T16:38:05.301] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[],"outputs":{},"exports":{}},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:05.310] [DEBUG] core - Fetching stack events admin-notes-StorageStack
+[2022-05-25T16:38:06.203] [INFO] core - admin-notes-StorageStack | [0mUPDATE_IN_PROGRESS[0m | AWS::CloudFormation::Stack | [0m[1madmin-notes-StorageStack[22m[0m | [0mUser Initiated[0m
+[2022-05-25T16:38:06.208] [INFO] core - admin-notes-StorageStack | [0mCREATE_IN_PROGRESS[0m | AWS::S3::Bucket | [0m[1mUploadsBucketC4B27CC7[22m[0m
+[2022-05-25T16:38:06.208] [INFO] core - admin-notes-StorageStack | [0mCREATE_IN_PROGRESS[0m | AWS::S3::Bucket | [0m[1mUploadsBucketC4B27CC7[22m[0m | [0mResource creation Initiated[0m
+[2022-05-25T16:38:06.212] [DEBUG] core - Checking stack status admin-notes-StorageStack
+[2022-05-25T16:38:07.101] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:07.101] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:12.102] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:12.115] [DEBUG] core - Fetching stack events admin-notes-StorageStack
+[2022-05-25T16:38:12.940] [DEBUG] core - Checking stack status admin-notes-StorageStack
+[2022-05-25T16:38:13.824] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:13.834] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:13.834] [INFO] default - Checking deploy status...
+[2022-05-25T16:38:18.836] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:18.846] [DEBUG] core - Fetching stack events admin-notes-StorageStack
+[2022-05-25T16:38:19.720] [DEBUG] core - Checking stack status admin-notes-StorageStack
+[2022-05-25T16:38:20.603] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:20.604] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:20.604] [INFO] default - Checking deploy status...
+[2022-05-25T16:38:25.606] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:25.625] [DEBUG] core - Fetching stack events admin-notes-StorageStack
+[2022-05-25T16:38:26.504] [INFO] core - admin-notes-StorageStack | [32mCREATE_COMPLETE[39m | AWS::S3::Bucket | [32m[1mUploadsBucketC4B27CC7[22m[39m
+[2022-05-25T16:38:26.505] [DEBUG] core - Checking stack status admin-notes-StorageStack
+[2022-05-25T16:38:27.314] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_COMPLETE-2022-05-25T07:38:25.064Z","timestamp":"2022-05-25T07:38:25.064Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_COMPLETE","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:27.331] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_COMPLETE-2022-05-25T07:38:25.064Z","timestamp":"2022-05-25T07:38:25.064Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_COMPLETE","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:32.333] [TRACE] core - Initial stack states: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"deploying","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_COMPLETE-2022-05-25T07:38:25.064Z","timestamp":"2022-05-25T07:38:25.064Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_COMPLETE","logicalResourceId":"UploadsBucketC4B27CC7"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z"},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:32.336] [DEBUG] core - Fetching stack events admin-notes-StorageStack
+[2022-05-25T16:38:33.205] [INFO] core - admin-notes-StorageStack | [32mUPDATE_COMPLETE[39m | AWS::CDK::Metadata | [32m[1mSSTMetadata[22m[39m
+[2022-05-25T16:38:33.211] [INFO] core - admin-notes-StorageStack | [32mUPDATE_COMPLETE_CLEANUP_IN_PROGRESS[39m | AWS::CloudFormation::Stack | [32m[1madmin-notes-StorageStack[22m[39m
+[2022-05-25T16:38:33.212] [INFO] core - admin-notes-StorageStack | [32mUPDATE_COMPLETE[39m | AWS::CloudFormation::Stack | [32m[1madmin-notes-StorageStack[22m[39m
+[2022-05-25T16:38:33.213] [DEBUG] core - Checking stack status admin-notes-StorageStack
+[2022-05-25T16:38:34.071] [INFO] core - [32m[39m
+[32m ✅  admin-notes-StorageStack[39m
+[32m[39m
+[2022-05-25T16:38:34.072] [TRACE] core - After update deploy statuses: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"succeeded","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"endedAt":1653464314071,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_COMPLETE-2022-05-25T07:38:25.064Z","timestamp":"2022-05-25T07:38:25.064Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_COMPLETE","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-05-25T07:38:27.414Z","timestamp":"2022-05-25T07:38:27.414Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"ab7a98b0-dbfd-11ec-8dc4-12900b76cb37","timestamp":"2022-05-25T07:38:29.174Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"ac0b6700-dbfd-11ec-8ace-0a9dca2a0b01","timestamp":"2022-05-25T07:38:30.112Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"admin-notes-StorageStack"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z","outputs":{},"exports":{}},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:34.112] [TRACE] core - After deploy stacks: [{"id":"admin-notes-StorageStack","name":"admin-notes-StorageStack","status":"succeeded","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464280297,"endedAt":1653464314071,"events":[{"eventId":"98119260-dbfd-11ec-8e7b-0e281ddd6df5","timestamp":"2022-05-25T07:37:56.599Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:02.841Z","timestamp":"2022-05-25T07:38:02.841Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_IN_PROGRESS-2022-05-25T07:38:03.604Z","timestamp":"2022-05-25T07:38:03.604Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_IN_PROGRESS","resourceStatusReason":"Resource creation Initiated","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"UploadsBucketC4B27CC7-CREATE_COMPLETE-2022-05-25T07:38:25.064Z","timestamp":"2022-05-25T07:38:25.064Z","resourceType":"AWS::S3::Bucket","resourceStatus":"CREATE_COMPLETE","logicalResourceId":"UploadsBucketC4B27CC7"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-05-25T07:38:27.414Z","timestamp":"2022-05-25T07:38:27.414Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"ab7a98b0-dbfd-11ec-8dc4-12900b76cb37","timestamp":"2022-05-25T07:38:29.174Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"admin-notes-StorageStack"},{"eventId":"ac0b6700-dbfd-11ec-8ace-0a9dca2a0b01","timestamp":"2022-05-25T07:38:30.112Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"admin-notes-StorageStack"}],"eventsFirstEventAt":"2022-05-25T07:37:51.599Z","outputs":{},"exports":{}},{"id":"admin-notes-MyStack","name":"admin-notes-MyStack","status":"unchanged","dependencies":[],"account":"770168654497","region":"us-east-1","startedAt":1653464255995,"endedAt":1653464255995,"events":[],"outputs":{"ApiEndpoint":"https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com"},"exports":{}}]
+[2022-05-25T16:38:34.118] [INFO] default - 
+Stack admin-notes-StorageStack
+[2022-05-25T16:38:34.136] [INFO] default -   Status: deployed
+[2022-05-25T16:38:34.137] [INFO] default - 
 Stack admin-notes-MyStack
-[2022-05-23T23:18:26.243] [INFO] default -   Status: no changes
-[2022-05-23T23:18:26.243] [INFO] default -   Outputs:
-[2022-05-23T23:18:26.244] [INFO] default -     ApiEndpoint: https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com
-[2022-05-23T23:18:26.244] [INFO] default - 
-[2022-05-23T23:18:27.115] [INFO] default - 
-[2022-05-23T23:18:27.116] [INFO] default - ==========================
-[2022-05-23T23:18:27.117] [INFO] default -  Starting Live Lambda Dev
-[2022-05-23T23:18:27.117] [INFO] default - ==========================
-[2022-05-23T23:18:27.117] [INFO] default - 
-[2022-05-23T23:18:27.126] [DEBUG] websocket - startWebSocketClient wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
-[2022-05-23T23:18:27.129] [DEBUG] default - Checking port 12557 on host 0.0.0.0
-[2022-05-23T23:18:27.139] [DEBUG] default - Checking port 13557 on host 0.0.0.0
-[2022-05-23T23:18:27.142] [DEBUG] client - Starting runtime server on port: 12557
-[2022-05-23T23:18:28.284] [DEBUG] websocket - WebSocket connection opened
-[2022-05-23T23:18:28.613] [INFO] client - Debug session started. Listening for requests...
-[2022-05-23T23:18:28.614] [DEBUG] client - Client connection id: SlSkJf0SoAMCFIQ=
-[2022-05-23T23:18:52.078] [INFO] client - [90mac46e4b3-a223-488e-be27-30ca38b90964 REQUEST admin-notes-MyStack-ApiLambdaGETB1714EF3-vxE3bBXWan6x [functions/lambda.handler] invoked by API GET /[39m
-[2022-05-23T23:18:52.081] [DEBUG] client - Invoking local function...
-[2022-05-23T23:18:52.082] [DEBUG] client - Triggering {
+[2022-05-25T16:38:34.139] [INFO] default -   Status: no changes
+[2022-05-25T16:38:34.140] [INFO] default -   Outputs:
+[2022-05-25T16:38:34.141] [INFO] default -     ApiEndpoint: https://7pjvx2gww5.execute-api.us-east-1.amazonaws.com
+[2022-05-25T16:38:34.141] [INFO] default - 
+[2022-05-25T16:38:35.029] [INFO] default - 
+[2022-05-25T16:38:35.029] [INFO] default - ==========================
+[2022-05-25T16:38:35.030] [INFO] default -  Starting Live Lambda Dev
+[2022-05-25T16:38:35.030] [INFO] default - ==========================
+[2022-05-25T16:38:35.030] [INFO] default - 
+[2022-05-25T16:38:35.048] [DEBUG] websocket - startWebSocketClient wss://19beu6mjcd.execute-api.us-east-1.amazonaws.com/admin admin-notes-debug-stack-bucket83908e77-192j5fwgvuhu0
+[2022-05-25T16:38:35.052] [DEBUG] default - Checking port 12557 on host 0.0.0.0
+[2022-05-25T16:38:35.083] [DEBUG] default - Checking port 13557 on host 0.0.0.0
+[2022-05-25T16:38:35.101] [DEBUG] client - Starting runtime server on port: 12557
+[2022-05-25T16:38:36.273] [DEBUG] websocket - WebSocket connection opened
+[2022-05-25T16:38:37.607] [INFO] client - Debug session started. Listening for requests...
+[2022-05-25T16:38:37.615] [DEBUG] client - Client connection id: Sq93YeY_oAMCJqA=
+[2022-05-25T16:39:43.638] [INFO] client - [90m133620e1-1a98-4588-90e6-97029561c2f4 REQUEST admin-notes-MyStack-ApiLambdaGETB1714EF3-vxE3bBXWan6x [functions/lambda.handler] invoked by API GET /[39m
+[2022-05-25T16:39:43.663] [DEBUG] client - Invoking local function...
+[2022-05-25T16:39:43.664] [DEBUG] client - Triggering {
   id: 'admin-notes-MyStack-Api-Lambda_GET_-',
   handler: 'functions/lambda.handler',
   runtime: 'nodejs16.x',
@@ -1869,9 +2127,9 @@ Stack admin-notes-MyStack
   bundle: { format: 'esm' },
   root: '/Users/jmkim/notes'
 }
-[2022-05-23T23:18:52.083] [DEBUG] client - First build...
-[2022-05-23T23:18:52.089] [DEBUG] client - First build finished
-[2022-05-23T23:18:52.092] [DEBUG] client - Spawning {
+[2022-05-25T16:39:43.665] [DEBUG] client - First build...
+[2022-05-25T16:39:43.717] [DEBUG] client - First build finished
+[2022-05-25T16:39:43.721] [DEBUG] client - Spawning {
   command: '/usr/local/bin/node',
   args: [
     '/Users/jmkim/notes/node_modules/@serverless-stack/aws-lambda-ric/bin/index.js',
@@ -1879,8 +2137,8 @@ Stack admin-notes-MyStack
   ],
   env: { AWS_LAMBDA_NODEJS_USE_ALTERNATIVE_CLIENT_1: 'true' }
 }
-[2022-05-23T23:18:52.224] [DEBUG] client - Worker waiting for function admin-notes-MyStack-Api-Lambda_GET_-
-[2022-05-23T23:18:52.227] [DEBUG] client - Sending next payload ac46e4b3-a223-488e-be27-30ca38b90964 admin-notes-MyStack-Api-Lambda_GET_- {
+[2022-05-25T16:39:43.876] [DEBUG] client - Worker waiting for function admin-notes-MyStack-Api-Lambda_GET_-
+[2022-05-25T16:39:43.892] [DEBUG] client - Sending next payload 133620e1-1a98-4588-90e6-97029561c2f4 admin-notes-MyStack-Api-Lambda_GET_- {
   version: '2.0',
   routeKey: 'GET /',
   rawPath: '/',
@@ -1889,9 +2147,9 @@ Stack admin-notes-MyStack
     accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'accept-encoding': 'gzip, deflate, br',
     'accept-language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
-    'cache-control': 'max-age=0',
     'content-length': '0',
     host: '7pjvx2gww5.execute-api.us-east-1.amazonaws.com',
+    purpose: 'prefetch',
     'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"macOS"',
@@ -1901,7 +2159,7 @@ Stack admin-notes-MyStack
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36',
-    'x-amzn-trace-id': 'Root=1-628b97cb-0ea5598627d2250f0faade7d',
+    'x-amzn-trace-id': 'Root=1-628ddd3e-7134aae649fce6f63876a1d5',
     'x-forwarded-for': '114.203.114.27',
     'x-forwarded-port': '443',
     'x-forwarded-proto': 'https'
@@ -1918,22 +2176,22 @@ Stack admin-notes-MyStack
       sourceIp: '114.203.114.27',
       userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36'
     },
-    requestId: 'SlSnziGlIAMESoA=',
+    requestId: 'Sq-B1gb7IAMESKA=',
     routeKey: 'GET /',
     stage: '$default',
-    time: '23/May/2022:14:18:51 +0000',
-    timeEpoch: 1653315531328
+    time: '25/May/2022:07:39:42 +0000',
+    timeEpoch: 1653464382758
   },
   isBase64Encoded: false
 }
-[2022-05-23T23:18:52.249] [DEBUG] client - Received response for ac46e4b3-a223-488e-be27-30ca38b90964 admin-notes-MyStack-Api-Lambda_GET_-
-[2022-05-23T23:18:52.250] [DEBUG] client - Response {
+[2022-05-25T16:39:43.946] [DEBUG] client - Received response for 133620e1-1a98-4588-90e6-97029561c2f4 admin-notes-MyStack-Api-Lambda_GET_-
+[2022-05-25T16:39:43.954] [DEBUG] client - Response {
   type: 'success',
   data: {
     statusCode: 200,
     headers: { 'Content-Type': 'text/plain' },
-    body: 'Hello, World! Your request was received at 23/May/2022:14:18:51 +0000.'
+    body: 'Hello, World! Your request was received at 25/May/2022:07:39:42 +0000.'
   }
 }
-[2022-05-23T23:18:52.251] [INFO] client - [90mac46e4b3-a223-488e-be27-30ca38b90964 RESPONSE {"statusCode":200,"headers":{"Content-Type":"text/plain"},"body":"Hello, World! Your request was received at 23/May/2022:14:18:51 +0000."}[39m
-[2022-05-23T23:18:52.253] [DEBUG] client - Worker waiting for function admin-notes-MyStack-Api-Lambda_GET_-
+[2022-05-25T16:39:43.955] [INFO] client - [90m133620e1-1a98-4588-90e6-97029561c2f4 RESPONSE {"statusCode":200,"headers":{"Content-Type":"text/plain"},"body":"Hello, World! Your request was received at 25/May/2022:07:39:42 +0000."}[39m
+[2022-05-25T16:39:43.959] [DEBUG] client - Worker waiting for function admin-notes-MyStack-Api-Lambda_GET_-

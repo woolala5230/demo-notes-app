@@ -12,6 +12,143 @@
           "version": "10.1.15"
         }
       },
+      "admin-notes-StorageStack": {
+        "id": "admin-notes-StorageStack",
+        "path": "admin-notes-StorageStack",
+        "children": {
+          "SSTMetadata": {
+            "id": "SSTMetadata",
+            "path": "admin-notes-StorageStack/SSTMetadata",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnResource",
+              "version": "2.24.0"
+            }
+          },
+          "Uploads": {
+            "id": "Uploads",
+            "path": "admin-notes-StorageStack/Uploads",
+            "children": {
+              "Bucket": {
+                "id": "Bucket",
+                "path": "admin-notes-StorageStack/Uploads/Bucket",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-StorageStack/Uploads/Bucket/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "notes"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "admin"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.Bucket",
+                  "version": "2.24.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.15"
+            }
+          },
+          "Notes": {
+            "id": "Notes",
+            "path": "admin-notes-StorageStack/Notes",
+            "children": {
+              "Table": {
+                "id": "Table",
+                "path": "admin-notes-StorageStack/Notes/Table",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "admin-notes-StorageStack/Notes/Table/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                      "aws:cdk:cloudformation:props": {
+                        "keySchema": [
+                          {
+                            "attributeName": "userId",
+                            "keyType": "HASH"
+                          },
+                          {
+                            "attributeName": "noteId",
+                            "keyType": "RANGE"
+                          }
+                        ],
+                        "attributeDefinitions": [
+                          {
+                            "attributeName": "userId",
+                            "attributeType": "S"
+                          },
+                          {
+                            "attributeName": "noteId",
+                            "attributeType": "S"
+                          }
+                        ],
+                        "billingMode": "PAY_PER_REQUEST",
+                        "pointInTimeRecoverySpecification": {
+                          "pointInTimeRecoveryEnabled": true
+                        },
+                        "tableName": "admin-notes-Notes",
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "notes"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "admin"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_dynamodb.CfnTable",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "admin-notes-StorageStack/Notes/Table/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_dynamodb.Table",
+                  "version": "2.24.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.15"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.24.0"
+        }
+      },
       "admin-notes-MyStack": {
         "id": "admin-notes-MyStack",
         "path": "admin-notes-MyStack",

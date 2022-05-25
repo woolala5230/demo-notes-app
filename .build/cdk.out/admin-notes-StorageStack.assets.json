@@ -1,0 +1,20 @@
+{
+  "version": "18.0.0",
+  "files": {
+    "a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3": {
+      "source": {
+        "path": "admin-notes-StorageStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "770168654497-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-770168654497-us-east-1",
+          "objectKey": "a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-file-publishing-role-770168654497-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,137 @@
+{
+ "Resources": {
+  "SSTMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Metadata": {
+    "aws:cdk:path": "admin-notes-StorageStack/SSTMetadata",
+    "sst:version": "1.1.2",
+    "sst:constructs": [
+     {
+      "id": "Uploads",
+      "addr": "c8ff75e9b8ea3437c5c125f407e1ba513c0fec33d9",
+      "stack": "admin-notes-StorageStack",
+      "type": "Bucket",
+      "data": {
+       "name": {
+        "Ref": "UploadsBucketC4B27CC7"
+       },
+       "notifications": [],
+       "notificationNames": []
+      }
+     },
+     {
+      "id": "Notes",
+      "addr": "c888d084f1a912ef3ee73aabfcbd1908e7242d4926",
+      "stack": "admin-notes-StorageStack",
+      "type": "Table",
+      "data": {
+       "tableName": {
+        "Ref": "NotesTable7100B0E8"
+       },
+       "consumers": []
+      }
+     }
+    ]
+   }
+  },
+  "UploadsBucketC4B27CC7": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "notes"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "admin"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "admin-notes-StorageStack/Uploads/Bucket/Resource"
+   }
+  },
+  "NotesTable7100B0E8": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "KeySchema": [
+     {
+      "AttributeName": "userId",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "noteId",
+      "KeyType": "RANGE"
+     }
+    ],
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "userId",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "noteId",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "admin-notes-Notes",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "notes"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "admin"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "admin-notes-StorageStack/Notes/Table/Resource"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}
