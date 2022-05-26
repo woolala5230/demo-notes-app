@@ -24,6 +24,9 @@ __export(stacks_exports, {
 });
 module.exports = __toCommonJS(stacks_exports);
 
+// stacks/ApiStack.js
+var import_resources2 = require("@serverless-stack/resources");
+
 // stacks/StorageStack.js
 var import_resources = require("@serverless-stack/resources");
 function StorageStack({ stack, app }) {
@@ -42,10 +45,39 @@ function StorageStack({ stack, app }) {
 }
 __name(StorageStack, "StorageStack");
 
-// stacks/MyStack.js
-var import_resources2 = require("@serverless-stack/resources");
-function MyStack({ stack }) {
+// stacks/ApiStack.js
+function ApiStack({ stack, app }) {
+  const { table } = (0, import_resources2.use)(StorageStack);
   const api = new import_resources2.Api(stack, "Api", {
+    defaults: {
+      function: {
+        permissions: [table],
+        environment: {
+          TABLE_NAME: table.tableName
+        }
+      }
+    },
+    routes: {
+      "GET /notes": "functions/list.main",
+      "POST /notes": "functions/create.main",
+      "GET /notes/{id}": "functions/get.main",
+      "PUT /notes/{id}": "functions/update.main",
+      "DELETE /notes/{id}": "functions/delete.main"
+    }
+  });
+  stack.addOutputs({
+    ApiEndpoint: api.url
+  });
+  return {
+    api
+  };
+}
+__name(ApiStack, "ApiStack");
+
+// stacks/MyStack.js
+var import_resources3 = require("@serverless-stack/resources");
+function MyStack({ stack }) {
+  const api = new import_resources3.Api(stack, "Api", {
     routes: {
       "GET /": "functions/lambda.handler"
     }
@@ -57,7 +89,7 @@ function MyStack({ stack }) {
 __name(MyStack, "MyStack");
 
 // stacks/index.js
-var import_resources3 = require("@serverless-stack/resources");
+var import_resources4 = require("@serverless-stack/resources");
 function main(app) {
   app.setDefaultFunctionProps({
     runtime: "nodejs16.x",
@@ -66,7 +98,7 @@ function main(app) {
       format: "esm"
     }
   });
-  app.stack(StorageStack);
+  app.stack(StorageStack).stack(ApiStack);
   app.stack(MyStack);
 }
 __name(main, "main");

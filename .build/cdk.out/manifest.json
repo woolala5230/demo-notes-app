@@ -27,7 +27,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-deploy-role-770168654497-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-cfn-exec-role-770168654497-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-770168654497-us-east-1/a4fc2662c9edebaee446ac0a119f076ced25a23aadb3efb16f69ef9382efcfc3.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-770168654497-us-east-1/a98b7fda1eb1eacc6ea3b1ab3540af99ec8166f1e184663db7f32a58e271e711.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -84,6 +84,18 @@
             "data": "NotesTable7100B0E8"
           }
         ],
+        "/admin-notes-StorageStack/Exports/Output{\"Fn::GetAtt\":[\"NotesTable7100B0E8\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttNotesTable7100B0E8Arn5DD5BF38"
+          }
+        ],
+        "/admin-notes-StorageStack/Exports/Output{\"Ref\":\"NotesTable7100B0E8\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefNotesTable7100B0E8C879CB95"
+          }
+        ],
         "/admin-notes-StorageStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
@@ -98,6 +110,313 @@
         ]
       },
       "displayName": "admin-notes-StorageStack"
+    },
+    "admin-notes-ApiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "admin-notes-ApiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "admin-notes-ApiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://770168654497/us-east-1",
+      "properties": {
+        "templateFile": "admin-notes-ApiStack.template.json",
+        "tags": {
+          "sst:app": "notes",
+          "sst:stage": "admin"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-deploy-role-770168654497-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-cfn-exec-role-770168654497-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-770168654497-us-east-1/b9e10818fe2a8fd1c432c5d47e4303b35f536e246d20de9a4a62c9449404b5ed.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "admin-notes-ApiStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::770168654497:role/cdk-hnb659fds-lookup-role-770168654497-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "admin-notes-StorageStack",
+        "admin-notes-ApiStack.assets"
+      ],
+      "metadata": {
+        "/admin-notes-ApiStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "notes"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "admin"
+              }
+            ]
+          }
+        ],
+        "/admin-notes-ApiStack/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiCD79AAA0"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDefaultStage1AAE989B"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLogGroup1717FE17"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesServiceRoleFAD2F768"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesServiceRoleDefaultPolicy46521967"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesA3E56CF7"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesEventInvokeConfigE155863D"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes/Integration_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesIntegrationGETnotes809882CF"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes/Integration_GET_--notes-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesIntegrationGETnotesPermissionA18F8817"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesBFEE3C9D"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_POST_--notes/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesServiceRoleD16681D3"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_POST_--notes/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesServiceRoleDefaultPolicy6D85CF6B"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotes3B067E1B"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_POST_--notes/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesEventInvokeConfig78ADA2E8"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_POST_--notes/Integration_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotesIntegrationPOSTnotes44F9E77C"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_POST_--notes/Integration_POST_--notes-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotesIntegrationPOSTnotesPermission83B10601"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotes66667A1D"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidServiceRole5ED71CA8"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidServiceRoleDefaultPolicy0BDDFC9B"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidBDFD7F2C"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_GET_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidEventInvokeConfig638AD083"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes--{id}/Integration_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesidIntegrationGETnotesidDDEC4C94"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes--{id}/Integration_GET_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesidIntegrationGETnotesidPermissionC332DC73"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesid7B39CB5A"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_PUT_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidServiceRole7A962796"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_PUT_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidServiceRoleDefaultPolicyB3FF9AED"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesid28D10C39"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_PUT_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidEventInvokeConfig80B67243"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_PUT_--notes--{id}/Integration_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidIntegrationPUTnotesid0B48B9D7"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_PUT_--notes--{id}/Integration_PUT_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidIntegrationPUTnotesidPermissionDD71990C"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidFAE087B0"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_DELETE_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidServiceRole196EBA58"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_DELETE_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidServiceRoleDefaultPolicy451F8A74"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesid69A96EAD"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Lambda_DELETE_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidEventInvokeConfigC7520EFE"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_DELETE_--notes--{id}/Integration_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidIntegrationDELETEnotesidE2F04DD5"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_DELETE_--notes--{id}/Integration_DELETE_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidIntegrationDELETEnotesidPermission717CBC89"
+          }
+        ],
+        "/admin-notes-ApiStack/Api/Route_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidCFA3191E"
+          }
+        ],
+        "/admin-notes-ApiStack/ApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpoint"
+          }
+        ],
+        "/admin-notes-ApiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/admin-notes-ApiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "admin-notes-ApiStack"
     },
     "admin-notes-MyStack.assets": {
       "type": "cdk:asset-manifest",
